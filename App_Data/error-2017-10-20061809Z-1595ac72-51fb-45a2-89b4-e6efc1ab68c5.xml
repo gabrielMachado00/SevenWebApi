@@ -1,0 +1,157 @@
+﻿<error errorId="1595ac72-51fb-45a2-89b4-e6efc1ab68c5" application="/LM/W3SVC/2/ROOT" host="GABRIEL-PC" type="System.ComponentModel.Win32Exception" message="O tempo limite de espera foi atingido" detail="System.Web.HttpUnhandledException (0x80004005): The underlying provider failed on Open. ---&gt; System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---&gt; System.Data.SqlClient.SqlException: Tempo Limite de Conexão Expirado. O tempo limite decorrido durante a fase pós-logon. A conexão expirou enquanto aguardava o servidor concluir o processo de logon e responder; ou talvez tenha expirado ao tentar criar várias conexões ativas.  A duração da tentativa de conexão com este servidor foi: [Pre-Login] initialization=3875; handshake=5378; [Login] initialization=0; authentication=673; [Post-Login] complete=6793;  ---&gt; System.ComponentModel.Win32Exception: O tempo limite de espera foi atingido&#xD;&#xA;   --- Fim do rastreamento de pilha de exceções internas ---&#xD;&#xA;   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)&#xD;&#xA;   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp; connection)&#xD;&#xA;   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)&#xD;&#xA;   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)&#xD;&#xA;   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)&#xD;&#xA;   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)&#xD;&#xA;   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)&#xD;&#xA;   em System.Data.SqlClient.SqlConnection.Open()&#xD;&#xA;   em System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;Open&gt;b__36(DbConnection t, DbConnectionInterceptionContext c)&#xD;&#xA;   em System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)&#xD;&#xA;   em System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)&#xD;&#xA;   em System.Data.Entity.Core.EntityClient.EntityConnection.&lt;Open&gt;b__2()&#xD;&#xA;   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()&#xD;&#xA;   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)&#xD;&#xA;   em System.Data.Entity.Core.EntityClient.EntityConnection.Open()&#xD;&#xA;   --- Fim do rastreamento de pilha de exceções internas ---&#xD;&#xA;   em System.Data.Entity.Core.EntityClient.EntityConnection.Open()&#xD;&#xA;   em System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)&#xD;&#xA;   em System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)&#xD;&#xA;   em System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()&#xD;&#xA;   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   em System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)&#xD;&#xA;   em System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()&#xD;&#xA;   em System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()&#xD;&#xA;   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)&#xD;&#xA;   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)&#xD;&#xA;   em SisMedApi.Controllers.ClienteEnderecoController.GetCLIENTE_ENDERECO(Int32 idCliente) na C:\Users\Gabriel\Desktop\seven\sismedapi\SisMedApi\Controllers\ClienteEnderecoController.cs:linha 38&#xD;&#xA;   em lambda_method(Closure , Object , Object[] )&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.&lt;&gt;c__DisplayClass10.&lt;GetExecutor&gt;b__9(Object instance, Object[] methodParameters)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Controllers.ApiControllerActionInvoker.&lt;InvokeActionAsyncCore&gt;d__0.MoveNext()&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Controllers.ActionFilterResult.&lt;ExecuteAsync&gt;d__2.MoveNext()&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Dispatcher.HttpControllerDispatcher.&lt;SendAsync&gt;d__1.MoveNext()" time="2017-10-20T06:18:09.5044859Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;O tempo limite de espera foi atingido&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Erro de Servidor no Aplicativo '/'.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;O tempo limite de espera foi atingido&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Descrição: &lt;/b&gt;The underlying provider failed on Open.&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Detalhes da Exceção: &lt;/b&gt;System.ComponentModel.Win32Exception: O tempo limite de espera foi atingido&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Erro de Origem:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Linha 36:         public IEnumerable&amp;lt;CLIENTE_ENDERECODTO&amp;gt; GetCLIENTE_ENDERECO(int idCliente)&#xD;&#xA;Linha 37:         {&#xD;&#xA;&lt;font color=red&gt;Linha 38:             return (from ce in db.CLIENTE_ENDERECO&#xD;&#xA;&lt;/font&gt;Linha 39:                     join ci in db.CIDADEs on ce.ID_CIDADE equals ci.ID_CIDADE into _ci&#xD;&#xA;Linha 40:                     from ci in _ci.DefaultIfEmpty()&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Arquivo de Origem: &lt;/b&gt; C:\Users\Gabriel\Desktop\seven\sismedapi\SisMedApi\Controllers\ClienteEnderecoController.cs&lt;b&gt; &amp;nbsp;&amp;nbsp; Linha: &lt;/b&gt; 38&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Rastreamento de Pilha:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[Win32Exception (0x80004005): O tempo limite de espera foi atingido]&#xD;&#xA;&#xD;&#xA;[SqlException (0x80131904): Tempo Limite de Conex&amp;#227;o Expirado. O tempo limite decorrido durante a fase p&amp;#243;s-logon. A conex&amp;#227;o expirou enquanto aguardava o servidor concluir o processo de logon e responder; ou talvez tenha expirado ao tentar criar v&amp;#225;rias conex&amp;#245;es ativas.  A dura&amp;#231;&amp;#227;o da tentativa de conex&amp;#227;o com este servidor foi: [Pre-Login] initialization=3875; handshake=5378; [Login] initialization=0; authentication=673; [Post-Login] complete=6793; ]&#xD;&#xA;   System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal&amp;amp; connection) +347&#xD;&#xA;   System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal&amp;amp; connection) +78&#xD;&#xA;   System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp;amp; connection) +191&#xD;&#xA;   System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) +154&#xD;&#xA;   System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) +21&#xD;&#xA;   System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) +90&#xD;&#xA;   System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) +217&#xD;&#xA;   System.Data.SqlClient.SqlConnection.Open() +96&#xD;&#xA;   System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&amp;lt;Open&amp;gt;b__36(DbConnection t, DbConnectionInterceptionContext c) +12&#xD;&#xA;   System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch(TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed) +72&#xD;&#xA;   System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext) +405&#xD;&#xA;   System.Data.Entity.Core.EntityClient.EntityConnection.&amp;lt;Open&amp;gt;b__2() +71&#xD;&#xA;   System.Data.Entity.SqlServer.&amp;lt;&amp;gt;c__DisplayClass1.&amp;lt;Execute&amp;gt;b__0() +15&#xD;&#xA;   System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Func`1 operation) +190&#xD;&#xA;   System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation) +82&#xD;&#xA;   System.Data.Entity.Core.EntityClient.EntityConnection.Open() +271&#xD;&#xA;&#xD;&#xA;[EntityException: The underlying provider failed on Open.]&#xD;&#xA;   System.Data.Entity.Core.EntityClient.EntityConnection.Open() +334&#xD;&#xA;   System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions) +132&#xD;&#xA;   System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction(Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess) +46&#xD;&#xA;   System.Data.Entity.Core.Objects.&amp;lt;&amp;gt;c__DisplayClass7.&amp;lt;GetResults&amp;gt;b__5() +154&#xD;&#xA;   System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Func`1 operation) +190&#xD;&#xA;   System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption) +283&#xD;&#xA;   System.Data.Entity.Core.Objects.ObjectQuery`1.&amp;lt;System.Collections.Generic.IEnumerable&amp;lt;T&amp;gt;.GetEnumerator&amp;gt;b__0() +15&#xD;&#xA;   System.Data.Entity.Internal.LazyEnumerator`1.MoveNext() +45&#xD;&#xA;   System.Collections.Generic.List`1..ctor(IEnumerable`1 collection) +381&#xD;&#xA;   System.Linq.Enumerable.ToList(IEnumerable`1 source) +58&#xD;&#xA;   SisMedApi.Controllers.ClienteEnderecoController.GetCLIENTE_ENDERECO(Int32 idCliente) in C:\Users\Gabriel\Desktop\seven\sismedapi\SisMedApi\Controllers\ClienteEnderecoController.cs:38&#xD;&#xA;   lambda_method(Closure , Object , Object[] ) +96&#xD;&#xA;   System.Web.Http.Controllers.&amp;lt;&amp;gt;c__DisplayClass10.&amp;lt;GetExecutor&amp;gt;b__9(Object instance, Object[] methodParameters) +28&#xD;&#xA;   System.Web.Http.Controllers.ActionExecutor.Execute(Object instance, Object[] arguments) +14&#xD;&#xA;   System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken) +128&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task) +92&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task) +58&#xD;&#xA;   System.Web.Http.Controllers.&amp;lt;InvokeActionAsyncCore&amp;gt;d__0.MoveNext() +267&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task) +92&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task) +58&#xD;&#xA;   System.Web.Http.Controllers.&amp;lt;ExecuteAsync&amp;gt;d__2.MoveNext() +491&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task) +92&#xD;&#xA;   System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task) +58&#xD;&#xA;   System.Web.Http.Dispatcher.&amp;lt;SendAsync&amp;gt;d__1.MoveNext() +551&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:application/json, text/plain, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_HOST:localhost:52528&#xD;&#xA;HTTP_REFERER:http://localhost:4200/Cadastro/Cliente&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:4200&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: application/json, text/plain, */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Host: localhost:52528&#xD;&#xA;Referer: http://localhost:4200/Cadastro/Cliente&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&#xD;&#xA;Origin: http://localhost:4200&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Gabriel\Desktop\seven\sismedapi\SisMedApi\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/api/cliente/0/endereco" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Gabriel\Desktop\seven\sismedapi\SisMedApi\api\cliente\0\endereco" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="56681" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/api/cliente/0/endereco" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="52528" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/api/cliente/0/endereco" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="application/json, text/plain, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:52528" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:4200/Cadastro/Cliente" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:4200" />
+    </item>
+  </serverVariables>
+</error>
